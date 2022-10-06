@@ -64,12 +64,12 @@ address {
   padding-right: 15px;
   margin: 0 auto;
 
-  outline: 3px solid orangered;
+  outline: 2px solid orangered;
 }
 
 .section {
   padding: 94px 0px;
-  outline: 3px solid green;
+  outline: 1px solid green;
 }
 
 .visually-hidden {
@@ -160,6 +160,19 @@ body {
   margin-right: 50px;
 }
 
+.header-contacs::before {
+  content:'';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/decor/envelope.svg);
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  
+}
+
 .header-nav-link:hover,
 .header-nav-link:focus,
 .header-nav-link:active,
@@ -176,11 +189,29 @@ body {
 /*--------------- HERO ---------- */
 
 .hero {
-  background-color: var(--bacgraund-color);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4), 
+    rgba(47, 48, 58, 0.4)), 
+    url(../images/hero/hero_bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #c4c4c4;
+
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  
 }
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -224,12 +255,16 @@ body {
   margin-bottom: 50px;
 }
 
+
+
 .advantage-title {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
+
+
 
 .advantage-list {
   display: flex;
@@ -238,7 +273,32 @@ body {
 }
 
 .advantage-item {
+  
   width: 270px;
+}
+
+.advantage-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+}
+.advantage-item.icon-antenna::before  {
+  background-image: url(../images/decor/antenna.svg);
+}
+.advantage-item.icon-clock::before {
+  background-image: url(../images/decor/clock.svg);
+}
+.advantage-item.icon-diagram::before  {
+  background-image: url(../images/decor/diagram.svg);
+}
+.advantage-item.icon-astronaut::before  {
+  background-image: url(../images/decor/astronaut.svg);
 }
 
 .advantage-text {
@@ -257,8 +317,7 @@ body {
 }
 
 /*------------- TEAM -------------*/
-.team-section {
-
+.team {
   background-color: var(--second-backgraund-color);
 }
 
@@ -283,7 +342,10 @@ body {
 .team-item {
   background-color: var(--main-backgraund-color);
   padding-bottom: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px 
+  rgba(0, 0, 0, 0.12), 0px 1px 1px 
+  rgba(0, 0, 0, 0.14), 0px 2px 1px 
+  rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   
 }
@@ -296,7 +358,27 @@ body {
   
 }
 
-/*------------- footer -------------*/
+/* ------------ CLIENT ------------ */
+.client-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.client-item {
+  display: flex;
+  align-items: center;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  
+}
+/*------------- FOOTER -------------*/
+.position-footer {
+  display: flex;
+}
 footer {
   background: var(--bacgraund-color);
   padding: 60px 0px;
@@ -347,6 +429,36 @@ footer {
 .addres-link:focus {
   color: var(--accent-color);
 }
+
+/* ------------- social ------------- */
+.social-text {
+  font-weight: 700;
+  line-height: 1.14px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+
+.social-list {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.1), 
+    rgba(255, 255, 255, 0.1));
+  border-radius: 50%;
+
+}
+
 
 /*************** PORFOLIO ****************/
 
